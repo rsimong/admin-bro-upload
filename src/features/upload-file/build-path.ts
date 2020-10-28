@@ -22,9 +22,10 @@ const buildRemotePath = (
   if (!file.name) {
     throw new Error(ERROR_MESSAGES.NO_FILENAME)
   }
-  const { ext, name } = path.parse(file.name)
+  //const { ext, name } = path.parse(file.name)
 
-  return `${record.id()}/${name}${ext}`
+  //return `${record.id()}/${name}${ext}`
+  return record.params.file;
 }
 
 export default buildRemotePath
